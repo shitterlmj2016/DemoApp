@@ -23,16 +23,16 @@ public class AddServlet extends HttpServlet {
         //RequestDispatcher rd = req.getRequestDispatcher("sq");
         //rd.forward(req,res);
 
-        // 2. Redirect
-        //res.sendRedirect("sq?k=" + k); // method 1 URL Rewriting
-        //drawback: multiple values, multiple servlet
+        // 2.1 Redirect - URL Rewriting
+        //res.sendRedirect("sq?k=" + k); // URL Rewriting
+        //drawback: hard to use when having multiple values, multiple servlet
 
-        // 3. Session
+        // 2.2 Redirect - Session
         //HttpSession session = req.getSession();
         //session.setAttribute("k", k);
         //res.sendRedirect("sq");
 
-        // 4. cookie
+        // 3. cookie
         Cookie cookie = new Cookie("k", k + ""); //change it to string
         res.addCookie(cookie);
         res.sendRedirect("sq");
