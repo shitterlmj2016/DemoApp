@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet{
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		int i = Integer.valueOf(req.getParameter("num1"));
 		int j = Integer.valueOf(req.getParameter("num2"));
 		
@@ -16,5 +16,7 @@ public class AddServlet extends HttpServlet{
 		//System.out.println(k);
 		PrintWriter out = res.getWriter(); //print data on a response object
 		out.println("The result is "+k);
+		
+		// Request Dispac
 	}
 }
