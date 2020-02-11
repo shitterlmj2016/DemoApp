@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Add</title>
 </head>
 <body bgcolor="#e6e6fa">
 <%--所有代码放在 <% %>里面--%>
