@@ -5,8 +5,10 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+@WebServlet("/add") //用拿个路径call这个servlet, 要加slash "/"
 public class AddServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         int i = Integer.parseInt(req.getParameter("num1"));

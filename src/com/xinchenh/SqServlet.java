@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 /**
  * Servlet implementation class SqServlet
  */
-@WebServlet("/SqServlet")
+@WebServlet("/sq")
 public class SqServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
