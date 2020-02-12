@@ -5,7 +5,8 @@
   Time: 3:07 下午
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.Statement, java.util.Random" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.sql.Statement, java.util.Random"
+         errorPage="error.jsp" %>
 <%@ include file="header.jsp" %> <%--include anthor page--%>
 <html>
     <head>
@@ -25,6 +26,14 @@
             pageContext.setAttribute("name", "xincheng"); //access this attribute under different session
             pageContext.setAttribute("phone", "iPhone", PageContext.SESSION_SCOPE); //设置scope
             out.print(application.getInitParameter("phone"));
+        %>
+        <% //create an error page
+//            try {
+//                int k = 9 / 0;
+//            } catch (Exception e) {
+//                out.println("Error: " + e.getMessage());
+//            }
+            int k = 9 / 0;
         %>
     </body>
 </html>
